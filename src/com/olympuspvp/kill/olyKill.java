@@ -32,6 +32,11 @@ public class olyKill extends JavaPlugin{
 			else{
 				kill.sendMessage(tag + "You were killed by " + ChatColor.DARK_RED + p.getName());
 				p.sendMessage(tag + "You killed " + ChatColor.DARK_RED + kill.getName());
+				for(Player plr : Bukkit.getOnlinePlayers()){
+					if(plr.isOp() && !plr.equals(p)){
+						plr.sendMessage(tag + ChatColor.DARK_RED + p.getName() + ChatColor.RED + " killed " + ChatColor.DARK_RED + kill.getName());
+					}
+				}
 				kill.setHealth(0);
 			}
 		}return true;
