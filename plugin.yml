@@ -1,0 +1,9 @@
+name: olyKill
+main: com.olympuspvp.kill.olyKill
+version: 0.1b
+author: Medious
+description: Kills players
+
+commands:
+    kill:
+        description: Kills players   
